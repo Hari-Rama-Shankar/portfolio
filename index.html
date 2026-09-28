@@ -1,619 +1,587 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-<style>
-    * {
-        box-sizing: border-box;
-    }
-    html, body {
-        max-width: 100%;
-        overflow-x: hidden;
-        margin: 0;
-    }
-    body {
-        background: radial-gradient(circle at 80% 90%, black, transparent 300%);
-    }
-    h1 {
-        text-align: center;
-        animation-name: shad;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        text-decoration: underline;
-    }
-    @keyframes shad {
-        0% {
-            text-shadow: 0 0 10px whitesmoke;
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-
-        50% {
-            text-shadow: 0 0 5px blanchedalmond;
-            color: aqua;
-        }
-
-        100% {
-            text-shadow: 0 0 10px azure;
-            color: black;
-        }
-    }
-    .c img {
-        width: 500px;
-        height: 500px;
-        border: 2px solid aqua;
-        border-radius: 400px;
-        margin-bottom: 10px;
-        animation-name: img;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        max-width: 100%;
-        object-fit: cover;
-    }
-    .c {
-        border: 3px solid whitesmoke;
-        border-radius: 30px;
-        display: flex;
-        height: 530px;
-        width: 100%;
-        overflow: hidden;
-    }
-    @keyframes img {
-        0% {
-            transform: scale(0);
-        }
-
-        50% {
-            transform: scale(0.5);
-        }
-
-        100% {
-            transform: scale(0.8);
-        }
-    }
-    .profin {
-        margin-top: 100px;
-        color: rgb(232, 208, 208);
-        text-shadow: 0 0 5px peachpuff;
-        min-width: 0;
-    }
-    .profin h2 {
-        text-decoration: underline;
-    }
-    .text,.texm {
-        margin: 10px;
-        padding: 10px;
-        color: cadetblue;
-        text-shadow: 0 0 4px chocolate;
-        border: 3px dashed oldlace;
-        width: 500px;
-        max-width: calc(100% - 20px);
-        border-radius: 20px;
-    }
-    .text {
-        transform: translate(1000px);
-    }
-    .texm {
-        transform: translate(100px);
-    }
-    div.text:hover, div.texm:hover,div.profin:hover {
-        transform: scale(1.02);
-    }
-    .ms {
-        overflow: hidden;
-        width: 100%;
-    }
-    .ms1,.ms2,.ms3,.ms4 {
-        border: 2px solid blueviolet;
-        width: 400px;
-        max-width: calc(100% - 20px);
-        margin: 10px;
-        border-radius: 40px;
-        padding: 10px;
-        color: aliceblue;
-        text-shadow: 0 0 5px olive;
-        animation-name: form;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-    }
-    .profin > h2,.texm > h2,.text > h2,.ms > h2,.myedu > h2 {
-        text-align: center;
-        text-decoration: underline;
-        animation-name: shad;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-    }
-    @keyframes form {
-        0% {
-            transform: translate(10px);
-        }
-
-        100% {
-            transform: translate(1000px);
-        }
-    }
-    .ms1 {
-        animation-delay: 0s;
-    }
-    .ms2 {
-        animation-delay: 0.5s;
-    }
-    .ms3 {
-        animation-delay: 1s;
-    }
-    .ms4 {
-        animation-delay: 1.5s;
-    }
-    .text {
-        position: relative;
-        left: 0;
-    }
-    .texm {
-        position: relative;
-        left: 0;
-    }
-    div#proj-r h3 {
-        color: aqua;
-        text-shadow: 0 0 10px slateblue;
-    }
-    [id^=proj] button {
-        border: 2px solid black;
-        color: black;
-        background-color: cadetblue;
-        margin-left: 10px;
-        border-radius: 10px;
-    }
-    [id^=proj] {
-        color: lightskyblue;
-        text-shadow: 0 0 10px lavenderblush;
-        margin-left: 0;
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-        padding: 10px;
-    }
-    #proj-r {
-        transform: translateX(300px);
-    }
-    #proj-p {
-        transform: translateX(700px);
-    }
-    #proj-s {
-        transform: translateX(1000px);
-    }
-    #proj-e {
-        transform: translateX(1400px);
-    }
-    .pro {
-        width: 100%;
-        overflow: hidden;
-    }
-    .pro > h2 {
-        position: relative;
-        left: 0;
-        top: 390px;
-        animation-name: shad;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        font-size: 80px;
-        text-align: start;
-        transform: translateX(100px) translateY(10px);
-    }
-    .myedu {
-        width: 100%;
-        overflow: hidden;
-    }
-    .myedu div {
-        color: lavender;
-        border: 1px solid azure;
-        width: 500px;
-        max-width: calc(100% - 60px);
-        border-radius: 10px;
-        padding: 5px;
-        margin: 30px;
-        animation-name: form;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-    }
-    .myedu > div:hover {
-        transform: scale(1.05);
-        animation: none;
-    }
-    .e1 {
-        animation-delay: 1s;
-    }
-    .e2 {
-        animation-delay: 4s;
-    }
-    .e3 {
-        animation-delay: 2s;
-    }
-    .e4 {
-        animation-delay: 3s;
-    }
-    .cont {
-        width: 100%;
-        overflow: hidden;
-    }
-    .cont > div {
-        color: aqua;
-        border: 2px solid snow;
-        width: 400px;
-        max-width: calc(100% - 20px);
-        padding-left: 50px;
-        border-radius: 50px;
-        animation-name: form;
-        animation-duration: 5s;
-    }
-    .cont div > h2 {
-        animation-name: shad;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        text-decoration: underline;
-    }
-    .foo {
-        border: 2px solid antiquewhite;
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        border-radius: 20px;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .foo > a {
-        color: aliceblue;
-    }
-    @media (max-width: 600px) {
         body {
-            width: 100%;
             overflow-x: hidden;
+            background: #0b51ac;
+            color: #1f2937;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
         }
         h1 {
-            font-size: 28px;
-            margin: 15px 5px;
+            text-align: center;
+            color: #ffffff;
+            background: #021131;
+            padding: 30px 15px;
+            font-size: 42px;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+        h2 {
+            color: #16c730;
+        }
+        h3 {
+            color: #4da40a;
+        }
+        p {
+            color: #9fec1a;
         }
         .c {
-            width: calc(100% - 20px);
-            height: auto;
-            min-height: 0;
-            margin: 10px;
-            padding: 15px;
+            width: 100%;
+            min-height: 530px;
+            padding: 60px 8%;
             display: flex;
-            flex-direction: column;
             align-items: center;
+            gap: 70px;
+            background: #ffffff;
+            border-bottom: 1px solid #dbe2ea;
+        }
+        .im {
+            flex: 0 0 420px;
             text-align: center;
         }
         .c img {
-            width: 250px;
-            height: 250px;
-            max-width: 80vw;
+            width: 420px;
+            height: 420px;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid #e5e7eb;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
         .profin {
-            margin-top: 20px;
-            width: 100%;
+            flex: 1;
+            min-width: 0;
         }
         .profin h2 {
-            font-size: 24px;
+            display: inline-block;
+            color: #2563eb;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 5px;
         }
         .profin h3 {
-            font-size: 18px;
+            font-size: 28px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: #111827;
         }
         .profin p {
-            font-size: 15px;
+            font-size: 17px;
+            margin-bottom: 15px;
+            color: #4b5563;
+        }
+        .profin strong {
+            color: #2563eb;
+        }
+        .profin b {
+            color: #111827;
+        }
+        .her {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #f4f7fb;
         }
         .text,.texm {
-            width: calc(100% - 20px);
-            max-width: none;
-            margin: 10px;
-            transform: none;
-            position: relative;
-            left: 0;
+            padding: 45px 8%;
+            min-height: 250px;
+            background: #ffffff;
+            border-bottom: 1px solid #dbe2ea;
+        }
+        .text {
+            border-right: 1px solid #dbe2ea;
+        }
+        .text h2,.texm h2 {
+            text-align: left;
+            color: #111827;
+            font-size: 27px;
+            margin-bottom: 20px;
+            border-left: 5px solid #2563eb;
+            padding-left: 12px;
+        }
+        .text p,.texm p {
+            font-size: 16px;
+            color: #4b5563;
         }
         .ms {
-            width: 100%;
-            padding: 5px;
+            grid-column: 1 / 3;
+            padding: 50px 8%;
+            background: #f8fafc;
+            border-bottom: 1px solid #dbe2ea;
         }
         .ms > h2 {
-            font-size: 26px;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #111827;
         }
         .ms1,.ms2,.ms3,.ms4 {
-            width: calc(100% - 20px);
-            max-width: none;
-            margin: 10px;
-            transform: none;
-            animation: none;
+            width: 100%;
+            padding: 25px;
+            margin-bottom: 15px;
+            background: #ffffff;
+            border: 1px solid #dbe2ea;
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        .ms1 h3,.ms2 h3,.ms3 h3,.ms4 h3 {
+            font-size: 20px;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+        .ms1 p,.ms2 p,.ms3 p,.ms4 p {
+            color: #6b7280;
         }
         .pro {
             width: 100%;
-            overflow: hidden;
+            padding: 60px 8%;
+            background: #ffffff;
+            border-bottom: 1px solid #dbe2ea;
         }
         .pro > h2 {
-            position: static;
-            top: auto;
-            left: auto;
-            transform: none;
-            font-size: 38px;
             text-align: center;
-            margin: 30px 0;
+            font-size: 36px;
+            color: #111827;
+            margin-bottom: 40px;
         }
-        [id^=proj] {
-            width: calc(100% - 20px);
-            margin: 10px;
-            padding: 15px;
-            transform: none !important;
-            overflow: hidden;
+        [id^="proj"] {
+            width: 100%;
+            padding: 25px;
+            margin-bottom: 18px;
+            background: #f8fafc;
+            border: 1px solid #dbe2ea;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
         }
-        [id^=proj] button {
-            margin-left: 0;
-            margin-top: 5px;
-            padding: 8px 12px;
-            max-width: 100%;
+        [id^="proj"] h3 {
+            color: #111827;
+            font-size: 20px;
+        }
+        [id^="proj"] button {
+            border: none;
+            border-radius: 6px;
+            padding: 11px 18px;
+            background: #2563eb;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        [id^="proj"] button:hover {
+            background: #1d4ed8;
+        }
+        .myed {
+            width: 100%;
+            background: #f4f7fb;
         }
         .myedu {
             width: 100%;
-            padding: 5px;
+            padding: 60px 8%;
         }
         .myedu > h2 {
-            font-size: 25px;
             text-align: center;
+            font-size: 32px;
+            color: #111827;
+            margin-bottom: 40px;
         }
         .myedu div {
-            width: calc(100% - 20px);
-            max-width: none;
-            margin: 15px 10px;
-            animation: none;
-            transform: none;
+            width: 100%;
+            padding: 25px;
+            margin-bottom: 18px;
+            background: #ffffff;
+            border: 1px solid #dbe2ea;
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+            color: #4b5563;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
         }
         .cont {
             width: 100%;
-            padding: 5px;
+            background: #111827;
         }
         .cont > div {
-            width: calc(100% - 20px);
-            max-width: none;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 25px;
-            animation: none;
-            transform: none;
+            width: 100%;
+            padding: 60px 8%;
+            color: white;
+            text-align: center;
         }
         .cont div > h2 {
-            font-size: 25px;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 25px;
         }
-        .foo {
-            width: calc(100% - 20px);
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            padding: 15px;
-        }
-        .foo > a {
-            text-align: center;
-            width: 100%;
-        }
-    }
-    @media (max-width: 400px) {
-        h1 {
-            font-size: 24px;
-        }
-        .c img {
-            width: 210px;
-            height: 210px;
-        }
-        .profin h2 {
-            font-size: 21px;
-        }
-        .profin h3 {
+        .cont p,.cont i,.cont b {
+            color: #d1d5db;
             font-size: 16px;
         }
-        .pro > h2 {
-            font-size: 32px;
+        .foo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 35px;
+            padding: 25px;
+            background: #030712;
         }
-        .myedu > h2,.cont div > h2 {
-            font-size: 21px;
+        .foo > a {
+            color: #d1d5db;
+            font-size: 14px;
         }
-        [id^=proj] button {
-            font-size: 12px;
+        .foo > a:hover {
+            color: #60a5fa;
         }
-    }
-</style>
+        @media (max-width: 900px) {
+            h1 {
+                font-size: 36px;
+            }
+            .c {
+                padding: 50px 5%;
+                gap: 40px;
+            }
+            .im {
+                flex: 0 0 330px;
+            }
+            .c img {
+                width: 330px;
+                height: 330px;
+            }
+            .profin h3 {
+                font-size: 24px;
+            }
+            .text,.texm,.ms,.pro.myedu {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+                padding: 25px 10px;
+                letter-spacing: 1px;
+            }
+            .c {
+                min-height: 0;
+                padding: 40px 20px;
+                flex-direction: column;
+                gap: 25px;
+                text-align: center;
+            }
+            .im {
+                flex: none;
+                width: 100%;
+            }
+            .c img {
+                width: 250px;
+                height: 250px;
+            }
+            .profin {
+                width: 100%;
+            }
+            .profin h2 {
+                font-size: 17px;
+            }
+            .profin h3 {
+                font-size: 21px;
+            }
+            .profin p {
+                font-size: 15px;
+            }
+            .her {
+                display: block;
+            }
+            .text,.texm {
+                padding: 35px 20px;
+            }
+            .text h2,.texm h2 {
+                font-size: 23px;
+            }
+            .ms {
+                padding: 40px 20px;
+            }
+            .ms > h2 {
+                font-size: 27px;
+            }
+            .ms1,.ms2,.ms3,.ms4 {
+                padding: 20px;
+            }
+            .pro {
+                padding: 40px 20px;
+            }
+            .pro > h2 {
+                font-size: 29px;
+                margin-bottom: 30px;
+            }
+            [id^="proj"] {
+                display: block;
+                padding: 20px;
+            }
+            [id^="proj"] h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+            [id^="proj"] button {
+                width: 100%;
+                padding: 11px;
+            }
+            .myedu {
+                padding: 40px 20px;
+            }
+            .myedu > h2 {
+                font-size: 26px;
+                margin-bottom: 30px;
+            }
+            .myedu div {
+                padding: 20px;
+                font-size: 14px;
+            }
+            .cont > div {
+                padding: 45px 20px;
+            }
+            .cont div > h2 {
+                font-size: 25px;
+            }
+            .foo {
+                flex-direction: column;
+                gap: 15px;
+                padding: 25px 15px;
+            }
+            .foo > a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 24px;
+            }
+            .c img {
+                width: 210px;
+                height: 210px;
+            }
+            .profin h3 {
+                font-size: 19px;
+            }
+            .pro > h2 {
+                font-size: 25px;
+            }
+            .myedu > h2 {
+                font-size: 23px;
+            }
+            .cont div > h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>My Portfolio-My Life</h1>
-<section class="c">
-    <div class="im">
-        <img src="reflect.jpeg" alt="MYSELF">
-    </div>
-    <div class="profin">
-        <h2>MY INTRO</h2>
-        <h3>Hello Gabbas,Myself Hari Ram Shankar</h3>
-        <p>I am a <strong>STUDENT</strong> at <b>SST</b>.</p>
-        <h3>
-            <strong style="color:aliceblue;">
-                The Quote: "Knowing is not enough, we must apply. Willing is not enough, we must do."
-            </strong>
-        </h3>
-        <p>---This is my one of my favorite quotes by BRUCLEE SIR.</p>
-        <p>
-            The Wisdom:<br>
-            Real growth doesn't come from reading books or planning endlessly.<br>
-            True mastery only happens when you take action, write the code,<br>
-            and execute your ideas in the real world.
-        </p>
-        <p>@Jsvhrs</p>
-    </div>
-</section>
-<section class="her">
-    <div class="text">
-        <h2>About Me:</h2>
-        <p>
-            Anna Namaste!<br>
-            Namma Hesaru HARI RAMA SHANKAR<br>
-            I am STUDENT for LIFE.<br>
-            I am learner,a love learning.<br>
-            I am admirer of MIYAMOTO MUSASHI.<br>
-            I am also follower of great personalities like VIVEKANANDA,BRUCE LEE
-        </p>
-    </div>
-    <div class="texm">
-        <h2>MY INTERESTS</h2>
-        <p>
-            I like CODING.<br>
-            I like Astrology.<br>
-            I am also fond of Numerology.<br>
-            My Interests also include:<br>
-            Psychology<br>
-            Viticulture<br>
-            Enology<br>
-        Also Interested In Becoming Master Of Wine...
-        </p>
-    </div>
-    <div class="ms">
-        <h2>MY SKILLS</h2>
-        <div class="ms1">
-            <h3>Python programming..</h3>
+    <h1>My Portfolio-My Life</h1>
+    <section class="c">
+        <div class="im">
+            <img src="reflect.jpeg" alt="MYSELF">
+        </div>
+        <div class="profin">
+            <h2>MY INTRO</h2>
+            <h3>Hello Gabbas,Myself Hari Ram Shankar</h3>
             <p>
-                I have PYTHON in INter first and second year.<br>
-                This is used for writing versatile programming<br>
-                used for:web dev<br>
-                data and AI.
+                I am a <strong>STUDENT</strong> at <b>SST</b>.
+            </p>
+            <h3>
+                <strong>
+                    The Quote: "Knowing is not enough, we must apply. Willing is not enough, we must do."
+                </strong>
+            </h3>
+            <p>
+                ---This is my one of my favorite quotes by BRUCLEE SIR.
+            </p>
+            <p>
+                The Wisdom:<br>
+                Real growth doesn't come from reading books or planning endlessly.<br>
+                True mastery only happens when you take action, write the code,<br>
+                and execute your ideas in the real world.
+            </p>
+            <p>@Jsvhrs</p>
+        </div>
+    </section>
+    <section class="her">
+        <div class="text">
+            <h2>About Me:</h2>
+            <p>
+                Anna Namaste!<br>
+                Namma Hesaru HARI RAMA SHANKAR<br>
+                I am STUDENT for LIFE.<br>
+                I am learner,a love learning.<br>
+                I am admirer of MIYAMOTO MUSASHI.<br>
+                I am also follower of great personalities like VIVEKANANDA,BRUCE LEE
             </p>
         </div>
-        <div class="ms2">
-            <h3>Java Programming..</h3>
+        <div class="texm">
+            <h2>MY INTERESTS</h2>
             <p>
-                One of the Interesing Language.<br>
-                I am still learning this language.<br>
-                This is used to develop secure,portable applications across and platforms.
+                I like CODING.<br>
+                I like Astrology.<br>
+                I am also fond of Numerology.<br>
+                My Interests also include:<br>
+                Psychology<br>
+                Viticulture<br>
+                Enology<br>
+                Also Interested In Becoming Master Of Wine...
             </p>
         </div>
-        <div class="ms3">
-            <h3>C++ Programming..</h3>
+        <div class="ms">
+            <h2>MY SKILLS</h2>
+            <div class="ms1">
+                <h3>Python programming..</h3>
+                <p>
+                    I have PYTHON in INter first and second year.<br>
+                    This is used for writing versatile programming<br>
+                    used for:web dev<br>
+                    data and AI.
+                </p>
+            </div>
+            <div class="ms2">
+                <h3>Java Programming..</h3>
+                <p>
+                    One of the Interesing Language.<br>
+                    I am still learning this language.<br>
+                    This is used to develop secure,portable applications across and platforms.
+                </p>
+            </div>
+            <div class="ms3">
+                <h3>C++ Programming..</h3>
+                <p>
+                    This is also a Interesting Language.<br>
+                    I am still learning this language.<br>
+                    Used for creating high-performance software,games, ad systems.
+                </p>
+            </div>
+            <div class="ms4">
+                <h3>Basic Mechanic Things..</h3>
+                <p>I love repairing.</p>
+            </div>
+        </div>
+    </section>
+    <section class="pro">
+        <h2>MY PROJECTS...</h2>
+        <div id="proj-r">
+            <h3>Project 1..</h3>
+            <a href="schoolassignment.html">
+                <button type="button">Click this to Visit My Website.</button>
+            </a>
+        </div>
+        <div id="proj-p">
+            <h3>TODO Website..</h3>
+            <a href="https://www.tasktracker.com">
+                <button type="button">Click this to Visit My Website.</button>
+            </a>
+        </div>
+        <div id="proj-s">
+            <h3>Project 2..</h3>
+            <a href="schass1.html">
+                <button type="button">Click this to Visit My Website.</button>
+            </a>
+        </div>
+        <div id="proj-e">
+            <h3>Note-Making Website..</h3>
+            <a href="https://www.notion.com">
+                <button type="button">Click this to Visit My Website.</button>
+            </a>
+        </div>
+        <div id="proj-s">
+            <h3>ENTERO Website..</h3>
+            <a href="https://www.tasktracker.com">
+                <button type="button">Click this to Visit My Website.</button>
+            </a>
+        </div>
+        <div id="proj-p">
+            <h3>URFIN Website..</h3>
+            <a href="https://www.tasktracker.com">
+                <button type="button">Click this to Visit My Website.</button>
+            </a>
+        </div>
+        <div id="proj-r">
+            <h3>BLOGDO Website..</h3>
+            <a href="https://www.amazon.com">
+                <button type="button">Click this to Visit My Website.</button>
+            </a>
+        </div>
+    </section>
+    <section class="myed">
+        <div class="myedu">
+            <h2>MY EDUCATION-MY LEARNING JOURNEY</h2>
+            <div class="e1">
+                1. Early Foundations: DEMON LORD SEED<br>
+                Starting Out:<br>
+                The journey begins in kindergarten,<br>
+                where a child learns basic social skills,<br>
+                sharing, and the alphabet.<br>
+                Building Curiosity: In elementary school,<br>
+                supportive teachers introduce reading,<br>
+                basic math, and science experiments.<br>
+                Overcoming Fear: Early hurdles like waking up early,<br>
+                dealing with shyness,<br>
+                or adjusting to a structured routine gradually turn into excitement for school.
+            </div>
+            <div class="e2">
+                2. Adolescence: HARVEST FESTIVAL:<br>
+                High school marks a major turning point where students face tougher subjects like algebra,<br>
+                physics, or literature.<br>
+                Developing Interests: Through science fairs, sports clubs, arts,<br>
+                or student leadership, learners discover what they love.<br>
+                Learning Resilience:<br>
+                Facing difficult exams and occasional failures teaches students the value of consistency,<br>
+                hard work, and asking for help.
+            </div>
+            <div class="e3">
+                3.AWAKENED DEMON LORD:<br>
+                Transitioning to college, university,<br>
+                or vocational training allows young adults to focus deeply on a specific career path.<br>
+                Shifting Paths: Many students enter with one major in mind,<br>
+                only to uncover new passions through engaging professors or hands-on internships that shift their career trajectory.
+            </div>
+            <div class="e4">
+                4. DEMON GOD:<br>
+                True education does not end with a diploma or degree;<br>
+                It continues through work, real-world experiences, and personal curiosity.<br>
+                Continuous Growth: Every new challenge or skill learned becomes a building block for self-confidence and adaptability.
+            </div>
+        </div>
+    </section>
+    <section class="cont">
+        <div>
+            <h2>MY CONTACT INFO:</h2>
             <p>
-                This is also a Interesting Language.<br>
-                I am still learning this language.<br>
-                Used for creating high-performance software,games, ad systems.
+                <i>My Number:90342XXXX1</i><br>
+                <i>email:soloved---@gamil.com</i><br>
+                <b>
+                    Adress:Near $$$$$,<br>
+                    #########,<br>
+                    pincode:*******.
+                </b>
             </p>
         </div>
-        <div class="ms4">
-            <h3>Basic Mechanic Things..</h3>
-            <p>I love repairing.</p>
-        </div>
-    </div>
-</section>
-<section class="pro">
-    <h2>MY PROJECTS...</h2>
-    <div id="proj-r">
-        <h3>Project 1..</h3>
-        <a href="schoolassignment.html">
-            <button type="button">Click this to Visit My Website.</button>
-        </a>
-    </div>
-     <div id="proj-p">
-        <h3>TODO Website..</h3>
-        <a href="https://www.tasktracker.com">
-            <button type="button">Click this to Visit My Website.</button>
-        </a>
-    </div>
-    <div id="proj-s">
-        <h3>Project 2..</h3>
-        <a href="schass1.html">
-            <button type="button">Click this to Visit My Website.</button>
-        </a>
-    </div>
-    <div id="proj-e">
-        <h3>Note-Making Website..</h3>
-        <a href="https://www.notion.com">
-            <button type="button">Click this to Visit My Website.</button>
-        </a>
-    </div>
-    <div id="proj-s">
-        <h3>ENTERO Website..</h3>
-        <a href="https://www.tasktracker.com">
-            <button type="button">Click this to Visit My Website.</button>
-        </a>
-    </div>
-    <div id="proj-p">
-        <h3>URFIN Website..</h3>
-        <a href="https://www.tasktracker.com">
-            <button type="button">Click this to Visit My Website.</button>
-        </a>
-    </div>
-    <div id="proj-r">
-        <h3>BLOGDO Website..</h3>
-        <a href="https://www.amazon.com">
-            <button type="button">Click this to Visit My Website.</button>
-        </a>
-    </div>
-</section>
-<br>
-<section class="myed">
-    <div class="myedu">
-        <h2>MY EDUCATION-MY LEARNING JOURNEY</h2>
-        <div class="e1">
-            1. Early Foundations: DEMON LORD SEED<br>
-            Starting Out:<br>
-            The journey begins in kindergarten,<br>
-            where a child learns basic social skills,<br>
-            sharing, and the alphabet.<br>
-            Building Curiosity: In elementary school,<br>
-            supportive teachers introduce reading,<br>
-            basic math, and science experiments.<br>
-            Overcoming Fear: Early hurdles like waking up early,<br>
-            dealing with shyness,<br>
-            or adjusting to a structured routine gradually turn into excitement for school.
-        </div>
-        <div class="e2">
-            2. Adolescence: HARVEST FESTIVAL:<br>
-            High school marks a major turning point where students face tougher subjects like algebra,<br>
-            physics, or literature.<br>
-            Developing Interests: Through science fairs, sports clubs, arts,<br>
-            or student leadership, learners discover what they love.<br>
-            Learning Resilience:<br>
-            Facing difficult exams and occasional failures teaches students the value of consistency,<br>
-            hard work, and asking for help.
-        </div>
-        <div class="e3">
-            3.AWAKENED DEMON LORD:<br>
-            Transitioning to college, university,<br>
-            or vocational training allows young adults to focus deeply on a specific career path.<br>
-            Shifting Paths: Many students enter with one major in mind,<br>
-            only to uncover new passions through engaging professors or hands-on internships that shift their career trajectory.
-        </div>
-        <div class="e4">
-            4. DEMON GOD:<br>
-            True education does not end with a diploma or degree;<br>
-            It continues through work, real-world experiences, and personal curiosity.<br>
-            Continuous Growth: Every new challenge or skill learned becomes a building block for self-confidence and adaptability.
-        </div>
-    </div>
-</section>
-<br>
-<section class="cont">
-    <div>
-        <h2>MY CONTACT INFO:</h2>
-        <p>
-            <i>My Number:90342XXXX1</i><br>
-            <i>email:soloved---@gamil.com</i><br>
-            <b>
-                Adress:Near $$$$$,<br>
-                #########,<br>
-                pincode:*******.
-            </b>
-        </p>
-    </div>
-</section>
-<br>
-<footer class="foo">
-    <a href="#">MY X ACC</a>
-    <a href="#">MY FACEBOOK ACC</a>
-    <a href="#">MY YOUTUBE CHANNEL</a>
-    <a href="#">MY INSTA ACC</a>
-</footer>
+    </section>
+    <footer class="foo">
+        <a href="#">MY X ACC</a>
+        <a href="#">MY FACEBOOK ACC</a>
+        <a href="#">MY YOUTUBE CHANNEL</a>
+        <a href="#">MY INSTA ACC</a>
+    </footer>
 </body>
 </html>
 
